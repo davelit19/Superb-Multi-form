@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Imevbore David">
+  <link href="multi.css" rel="stylesheet">
+  <title>Multistep Form</title>
+  <link rel="shortcut icon" type="image/png" href="favicon-32x32.png">
+</head>
+
+<body>
+  <main class="main">
+    <ul>
+      <li class="tracker">
+        <button class="btn" onclick="jumpTab(0)">1</button>
+        <div class="steps">
+          <p>STEP 1</p>
+          <h5>YOUR INFO</h5>
+        </div>
+      </li>
+      <li class="tracker">
+        <button class="btn" onclick="jumpTab(1)">2</button>
+        <div class="steps">
+          <p>STEP 2</p>
+          <h5>SELECT PLAN</h5>
+        </div>
+      </li>
+      <li class="tracker">
+        <button class="btn" onclick="jumpTab(2)">3</button>
+        <div class="steps">
+          <p>STEP 3</p>
+          <h5>ADD-ONS</h5>
+        </div>
+      </li>
+      <li class="tracker">
+        <button class="btn" onclick="jumpTab(3)">4</button>
+        <div class="steps">
+          <p>STEP 4</p>
+          <h5>SUMMARY</h5>
+        </div>
+      </li>
+    </ul>
+    <div>
+      <form class="form" id="form-field">
+        <section class="tab">
+          <div class="header">
+            <h1>Personal info</h1>
+            <P>Please provide your name, email address and phone number.</P>
+          </div>
+          <div class="sub-tab">
+            <div>
+              <label for="name">Name</label>
+              <p class="error">This Field is required</p>
+            </div>
+            <input type="text" autocomplete="on" placeholder="e.g Stephen King" id="name" required>
+          </div>
+          <div class="sub-tab">
+            <div>
+              <label for="email">Email Address</label>
+              <p class="error">This Field is required</p>
+            </div>
+            <input type="email" autocomplete="on" placeholder="e.g stephenking@lorem.com" id="email" required>
+          </div>
+          <div class="sub-tab">
+            <div>
+              <label for="number">Phone Number</label>
+              <p class="error">This Field is required</p>
+            </div>
+            <input type="number" autocomplete="on" id="number" placeholder="e.g +1 234 567 890" required>
+          </div>
+        </section>
+        <section class="tab">
+          <div class="header">
+            <h1>Select your plan</h1>
+            <P>You have the option of monthly or yearly billing.</P>
+          </div>
+          <div class="step2">
+            <ul class="ul-step2">
+              <li>
+                <img src="icon-arcade.svg">
+              </li>
+              <li class="sec-li">
+                <p>Arcade</p>
+                <p class="priceCont priceCont-all"><span class="span-1">$9/mo</span>
+                  <span class="span-2">$90/yr</span>
+                </p>
+                <p class="year-str">2 months free</p>
+
+              </li>
+            </ul>
+            <ul class="ul-step2">
+              <li><img src="icon-advanced.svg"></li>
+              <li class="sec-li">
+                <p>Advanced</p>
+                <p class="priceCont priceCont-all"><span class="span-1">$12/mo</span>
+                  <span class="span-2">$120/yr</span>
+                </p>
+                <p class="year-str">2 months free</p>
+              </li>
+            </ul>
+            <ul class="ul-step2">
+              <li><img src="icon-pro.svg"></li>
+              <li class="sec-li">
+                <p>Pro</p>
+                <p class="priceCont priceCont-all"><span class="span-1">$15/mo</span>
+                  <span class="span-2">$150/yr</span>
+                </p>
+                <p class="year-str">2 months free</p>
+              </li>
+            </ul>
+          </div>
+          <div class="toggle-cont">
+            <div class="toggle">
+              <p id="step2-monthly">Monthly</p>
+              <label class="toggle-switch">
+                <input type="checkbox" id="toggle-checked">
+                <span class="slider"></span>
+              </label>
+              <p id="step2-yearly">Yearly</p>
+            </div>
+          </div>
+        </section>
+        <section class="tab">
+          <div class="header">
+            <h1>Pick add-ons</h1>
+            <p>Add-ons help enhance your gaming experience.</p>
+          </div>
+          <ul class="step3">
+            <li class="step3-li">
+              <div class="step3-div">
+                <input type="checkbox" class="checked" id="check1">
+                <div class="label-p">
+                  <label for="check1">Online service</label><br>
+                  <p>Access to multiplayer games</p>
+                </div>
+              </div>
+              <p class="step3-p priceCont-all"><span class="span-1">+$1/mo</span>
+                <span class="span-2">$10/yr</span>
+              </p>
+            </li>
+            <li class="step3-li">
+              <div class="step3-div">
+                <input type="checkbox" class="checked" id="check2">
+                <div class="label-p">
+                  <label for="check2">Larger Storage</label><br>
+                  <p>Extra 1TB of cloud save</p>
+                </div>
+              </div>
+              <p class="step3-p priceCont-all"><span class="span-1">+$2/mo</span>
+                <span class="span-2">$20/yr</span>
+              </p>
+            </li>
+            <li class="step3-li">
+              <div class="step3-div">
+                <input type="checkbox" class="checked" id="check3">
+                <div class="label-p">
+                  <label for="check3">Customizeable profile</label><br>
+                  <p>Custom theme on your profile</p>
+                </div>
+              </div>
+              <p class="step3-p priceCont-all"><span class="span-1">+$2/mo</span>
+                <span class="span-2">$20/yr</span>
+
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section class="tab">
+          <div class="header">
+            <h1>Finishing up</h1>
+            <p>Double check everything looks OK before confirming.</p>
+          </div>
+          <ul class="step4">
+            <li>
+              <div class="arcade">
+                <p class="arcade-bold">Arcade<span class="arcade-mo">(Monthly)</span><span class="arcade-yr toggle-str">(Yearly)</span></p>
+                <p id="change">Change</p>
+              </div>
+              <p class="priceCont-2 priceCont-2-bold"><span class="step4-mo">$9/mo</span>
+                <span class="step4-yr remove-mo-or-yr">$90/yr</span>
+              </p>
+            </li>
+
+            <li>
+              <div>
+                <p class="features">Online service</p>
+                <p class="priceCont-2 priceCont-2-faint"><span class="step4-mo">+$1/mo</span>
+                  <span class="step4-yr remove-mo-or-yr">+$10/yr</span>
+                </p>
+              </div>
+              <div>
+                <p class="features">Larger storage</p>
+                <p class="priceCont-2 priceCont-2-faint"><span class="step4-mo">+$2/mo</span>
+                  <span class="step4-yr remove-mo-or-yr">+$20/yr</span>
+                </p>
+              </div>
+            </li>
+          </ul>
+          <div class="total">
+            <p class="features">Total <span class="total-mo">(per month)</span><span class="total-yr toggle-str">(per year)</span></p>
+            <p class="priceCont-2"><span class="step4-mo">+$12/mo</span>
+              <span class="step4-yr remove-mo-or-yr">+$120/yr</span>
+            </p>
+
+          </div>
+        </section>
+        <section class="tab">
+          <div class="step5-div">
+            <img src="icon-thank-you.svg">
+            <h1>Thank you!</h1>
+            <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need
+              support, please feel free to email us at support@loremgaming.com</p>
+          </div>
+        </section>
+      </form>
+      <div class="btn-cont">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Go Back</button>
+        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next Step</button>
+      </div>
+    </div>
+  </main>
+  <script src="multi.js"></script>
+</body>
+
+</html>
